@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 集群连接
  */
-public class ClusterConn {
+public class Cluster {
 
     /**
      * 获取集群中所有消息队列节点
@@ -17,9 +17,9 @@ public class ClusterConn {
      * @param secretKey 安全访问密钥
      * @return List<Node>
      */
-    public List<Node> GetNodes(String url,String secretKey){
+    public static List<Node> GetNodes(String url,String secretKey){
         String res = HttpUtil.sendPost(url,secretKey);
 
-        return JsonReadUtil.getList(res);
+        return JsonReadUtil.getNodes(res);
     }
 }
