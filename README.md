@@ -35,7 +35,7 @@
 
 ```java
 /**
- * 连接Demo
+ * 演示Demo
  */
 public class DemoApplication {
 
