@@ -59,9 +59,8 @@ public class DemoApplication {
 
                 //如果是json字符串格式的消息
                 if(msg.charAt(0) == '{'){
-                    // TODO 监听消息队列发送的消息
 
-                    //解析数据到Message类
+                    //解析msg字符串，将其转为Message类
                     Message message = JsonReadUtil.getMessage(msg);
                     System.out.println("MessageData: "+message.getMessageData());
 
